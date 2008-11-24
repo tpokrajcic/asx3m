@@ -1,0 +1,125 @@
+#summary QuickStart to asx3m.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+{{{
+package hr.binaria.dto 
+{
+	public class Client
+	{
+		private var _age:int;
+		
+		public var id:Number;
+		public var name:String;
+		public var contacted:Boolean;
+		public var mainProduct:Product;
+		public var products:Array;
+		
+		public function get age():int{
+			return _age;
+		}
+		public function set age(value:int):void {
+			return _age;
+		}
+	}
+}
+
+package hr.binaria.dto
+{
+	public class Product
+	{
+		public var id:Number;
+		public var name:String;
+	}
+}
+
+package {
+
+	public class Asx3mTest
+	{
+		
+		import hr.binaria.dto.Product;
+		import hr.binaria.dto.Client;
+		import hr.binaria.asx3m.Asx3mer;
+		
+		public function Asx3mTest()
+		{	
+			
+			var client:Client=new Client();				
+			client.contacted=false;
+			client.name="John";
+			
+			client.mainProduct=new Product();
+			client.mainProduct.id=0;
+			client.mainProduct.name="Main product";
+			
+			var prod1:Product=new Product();
+			prod1.id=1;
+			prod1.name="Product 1";
+			var prod2:Product=new Product();
+			prod2.id=2;
+			prod2.name="Product 2";
+			
+			client.products=new Array;
+			client.products.push(prod1);
+			client.products.push(prod2);
+						
+			//convert object to XML
+			var xmlObj:XML=Asx3mer.instance.toXML(client);
+			trace(xmlObj);	
+			//decode object from XML				
+			var clientDecoded:Client=Asx3mer.instance.fromXML(xmlObj) as Client;				
+			
+			//convert object to xml forcing type	
+			var xmlObjForced:XML=Asx3mer.instance.toXML(client,"SomeOtherType");
+			trace(xmlObjForced);	
+		}		
+	}
+}
+}}}
+
+Trace output should be:
+{{{
+<hr.binaria.dto.Client>
+  <name>John</name>
+  <mainProduct>
+    <name>Main product</name>
+    <id>0</id>
+  </mainProduct>
+  <products>
+    <hr.binaria.dto.Product>
+      <name>Product 1</name>
+      <id>1</id>
+    </hr.binaria.dto.Product>
+    <hr.binaria.dto.Product>
+      <name>Product 2</name>
+      <id>2</id>
+    </hr.binaria.dto.Product>
+  </products>
+  <contacted>false</contacted>
+</hr.binaria.dto.Client>
+
+<SomeOtherType>
+  <name>John</name>
+  <mainProduct>
+    <name>Main product</name>
+    <id>0</id>
+  </mainProduct>
+  <products>
+    <hr.binaria.dto.Product>
+      <name>Product 1</name>
+      <id>1</id>
+    </hr.binaria.dto.Product>
+    <hr.binaria.dto.Product>
+      <name>Product 2</name>
+      <id>2</id>
+    </hr.binaria.dto.Product>
+  </products>
+  <contacted>false</contacted>
+</SomeOtherType>
+}}}
