@@ -1,11 +1,9 @@
 #summary QuickStart to asx3m.
 
 = Introduction =
-
-Add your content here.
-
-
-= Details =
+Here's a simple code that illustrates usage of asx3m library.<br>
+It defines two DTO classes and de/serializes them.<br>
+All public properties are serialized, no matter if they are defined over getter/setter or directly.
 
 {{{
 package hr.binaria.dto 
@@ -83,7 +81,7 @@ package {
 }
 }}}
 
-Trace output should be:
+Trace output is:
 {{{
 <hr.binaria.dto.Client>
   <name>John</name>
