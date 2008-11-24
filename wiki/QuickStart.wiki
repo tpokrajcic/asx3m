@@ -70,6 +70,7 @@ package {
 			//convert object to XML
 			var xmlObj:XML=Asx3mer.instance.toXML(client);
 			trace(xmlObj);	
+
 			//decode object from XML				
 			var clientDecoded:Client=Asx3mer.instance.fromXML(xmlObj) as Client;				
 			
