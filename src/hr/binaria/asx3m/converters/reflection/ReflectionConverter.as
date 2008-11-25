@@ -58,20 +58,6 @@ package hr.binaria.asx3m.converters.reflection
 				//skip variables with null value
 				if (propertyValue!=null){					
 					writer.startNode(property.@name);	
-					
-					// NOT IN USE BUT MIGHT BE USEFUL - START
-					// this chunk of code reads custom [RemoteType] metadata, but it's not used because
-					// this XML output format doesn't require property type information
-					
-					/* 
-					//first check if exists user defined [RemoteType] metadata for this property 
-					 propertyType=getRemoteType(property.elements("metadata"));
-					if (propertyType==null){
-						//first try if there's matching alias. if not use actionscript type.
-						propertyType=_alias[property.@type] ? _alias[property.@type] : property.@type;
-					}  */					
-					// NOT IN USE BUT MIGHT BE USEFUL - END
-					
 					context.convertAnother(propertyValue,null);					
 					writer.endNode();	
 				}					
@@ -83,21 +69,7 @@ package hr.binaria.asx3m.converters.reflection
 				}
 				writer.startNode(property.@name);	
 				//skip variables with null value
-				if (source[property.@name]!=null){
-					
-					// NOT IN USE BUT MIGHT BE USEFUL - START
-					// this chunk of code reads custom [RemoteType] metadata, but it's not used because
-					// this XML output format doesn't require property type information
-					
-					/* 
-					//first check if there's metadata defined type
-					propertyType=getRemoteType(property.elements("metadata"));
-					if (propertyType==null){
-						//then try if there's matching alias. if not use actionscript type.
-						propertyType=_alias[property.@type] ? _alias[property.@type] : property.@type;
-					}*/					
-					// NOT IN USE BUT MIGHT BE USEFUL - END
-					
+				if (source[property.@name]!=null){					
 					context.convertAnother(source[property.@name],null);
 				}				
 				writer.endNode();		
@@ -161,22 +133,5 @@ package hr.binaria.asx3m.converters.reflection
 				return (value);
 			}
 		}
-		/**
-		 * Reads [RemoteType] user defined metadata on property
-		 * 
-		 */
-		private function getRemoteType(propertyMetadataList:XMLList):String{
-			var remoteType:String;			
-			for each (var metadata:XML in propertyMetadataList){
-				if (metadata.@name=="RemoteType"){
-					for each (var arg:XML in metadata.elements("arg")){
-						if (arg.@key=="alias"){
-							remoteType=arg.@value;							
-						}
-					}
-				}
-			}
-			return remoteType;
-		}		
 	}
 }
