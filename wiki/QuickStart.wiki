@@ -37,14 +37,15 @@ package hr.binaria.dto
 }
 
 package {
+       import flash.display.Sprite;
+	
+       import hr.binaria.dto.Product;
+       import hr.binaria.dto.Client;
+       import hr.binaria.asx3m.Asx3mer;
 
-	public class Asx3mTest
+	public class Asx3mTest extends Sprite
 	{
-		
-		import hr.binaria.dto.Product;
-		import hr.binaria.dto.Client;
-		import hr.binaria.asx3m.Asx3mer;
-		
+                		
 		public function Asx3mTest()
 		{	
 			
