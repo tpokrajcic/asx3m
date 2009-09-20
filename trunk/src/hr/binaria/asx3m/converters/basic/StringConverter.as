@@ -12,7 +12,6 @@
 package hr.binaria.asx3m.converters.basic
 {
 	import flash.utils.getDefinitionByName;
-	import vegas.util.ClassUtil;
 	
 	public class StringConverter extends AbstractSingleValueConverter
 	{

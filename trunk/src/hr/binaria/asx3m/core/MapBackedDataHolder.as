@@ -12,9 +12,9 @@
 package hr.binaria.asx3m.core
 {
 	import hr.binaria.asx3m.converters.IDataHolder;
-	import vegas.data.Map;
-	import vegas.data.map.HashMap;
-	import vegas.data.iterator.Iterator;
+	import system.data.Map;
+	import system.data.maps.HashMap;
+	import system.data.Iterator;
 
 	public class MapBackedDataHolder implements IDataHolder
 	{

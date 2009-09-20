@@ -11,8 +11,8 @@
 
 package hr.binaria.asx3m.mapper
 {
-	import vegas.data.Map;
-	import vegas.data.map.HashMap;
+	import system.data.Map;
+	import system.data.maps.HashMap;
 
 	public class DefaultImplementationsMapper extends MapperWrapper
 	{

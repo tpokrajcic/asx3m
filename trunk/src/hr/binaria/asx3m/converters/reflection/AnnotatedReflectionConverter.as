@@ -17,8 +17,8 @@ package hr.binaria.asx3m.converters.reflection
 	import hr.binaria.asx3m.converters.IMarshallingContext;
 	import hr.binaria.asx3m.io.IHierarchicalStreamWriter;
 	import hr.binaria.asx3m.annotations.Annotated;
-	import vegas.data.list.ArrayList;
-	import vegas.data.iterator.Iterator;
+	import system.data.lists.ArrayList;
+	import system.data.Iterator;
 	import hr.binaria.asx3m.annotations.Annotation;
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getQualifiedClassName;

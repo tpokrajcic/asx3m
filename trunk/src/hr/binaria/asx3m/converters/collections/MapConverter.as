@@ -18,9 +18,9 @@ package hr.binaria.asx3m.converters.collections
 	import hr.binaria.asx3m.io.IHierarchicalStreamWriter;
 	import hr.binaria.asx3m.mapper.IMapper;
 	
-	import vegas.data.Map;
-	import vegas.data.iterator.Iterator;
-	import vegas.data.map.HashMap;
+	import system.data.Map;
+	import system.data.Iterator;
+	import system.data.maps.HashMap;
 	
 	import flash.utils.getQualifiedClassName;
 	import flash.utils.getDefinitionByName;

@@ -11,7 +11,7 @@
 
 package hr.binaria.asx3m.mapper
 {
-	import vegas.data.sets.HashSet;
+	import system.data.sets.HashSet;
 	
 	public class ImmutableTypesMapper extends MapperWrapper
 	{
@@ -24,7 +24,7 @@ package hr.binaria.asx3m.mapper
 		}
 		
 		public function addImmutableType(type:Class):void {
-	        immutableTypes.insert(type);
+	        immutableTypes.add(type);
 	    }
 	    
 	    override public function isImmutableValueType(type:Class):Boolean {

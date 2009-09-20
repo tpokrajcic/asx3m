@@ -13,25 +13,25 @@ package hr.binaria.asx3m.io.xml
 {
 	import hr.binaria.asx3m.io.IHierarchicalStreamWriter;
 	
-	import vegas.data.List;
-	import vegas.data.list.ArrayList;
-	import vegas.data.stack.SimpleStack;
+	import system.data.List;
+	import system.data.lists.ArrayList;
+	import system.data.stacks.ArrayStack;
 
 	public class E4XWriter implements IHierarchicalStreamWriter
 	{
 		private var _result:List;
-		private var _nodeStack:SimpleStack;
+		private var _nodeStack:ArrayStack;
 		
 		/** 
 		 * container - XML object that holds result.
 		 */ 
 		public function E4XWriter(container:XML){					
 			container.setName("root_helper");
-			_nodeStack=new SimpleStack();
+			_nodeStack=new ArrayStack();
 			_result=new ArrayList();			
 			if (container != null) {
 	            _nodeStack.push(container);
-	            _result.insert(container);
+	            _result.add(container);
        		 }
 		}
 		
@@ -47,7 +47,7 @@ package hr.binaria.asx3m.io.xml
 		{
 			var node:XML = _nodeStack.pop();
 			if (_nodeStack.size() == 0) {
-				_result.insert(node);
+				_result.add(node);
        		}
 		}
 		
