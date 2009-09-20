@@ -20,8 +20,8 @@ package hr.binaria.asx3m.core
 	import hr.binaria.asx3m.io.IHierarchicalStreamReader;
 	import hr.binaria.asx3m.mapper.IMapper;
 	
-	import vegas.data.iterator.Iterator;
-	import vegas.data.stack.SimpleStack;
+	import system.data.Iterator;
+	import system.data.stacks.ArrayStack;
 
 	public class TreeUnmarshaller implements IUnmarshallingContext
 	{
@@ -30,7 +30,7 @@ package hr.binaria.asx3m.core
 	    private var _converterLookup:IConverterLookup;
 	    private var _mapper:IMapper;
 	    //TODO: zamijeniti sa FastStack
-	    private var types:SimpleStack = new SimpleStack();
+	    private var types:ArrayStack = new ArrayStack();
 	    private var dataHolder:IDataHolder;
 	    //private var final PrioritizedList validationList = new PrioritizedList();
 		

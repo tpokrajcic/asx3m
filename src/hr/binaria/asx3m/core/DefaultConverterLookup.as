@@ -15,11 +15,11 @@ package hr.binaria.asx3m.core
 	import hr.binaria.asx3m.converters.IConverter;
 	import hr.binaria.asx3m.mapper.IMapper;
 	import hr.binaria.asx3m.core.util.PrioritizedList;
-	import vegas.data.Map;
-	import vegas.data.map.HashMap;
-	import vegas.data.List;
-	import vegas.data.list.ArrayList;
-	import vegas.data.iterator.Iterator;
+	import system.data.Map;
+	import system.data.maps.HashMap;
+	import system.data.List;
+	import system.data.lists.ArrayList;
+	import system.data.Iterator;
 	import hr.binaria.asx3m.converters.ISingleValueConverter;
 
 	public class DefaultConverterLookup implements IConverterLookup
@@ -59,10 +59,10 @@ package hr.binaria.asx3m.core
 	        //converters.add(converter, priority);
 	        if (priority<0){
 	        	//have to put reflectionconverter to the bottom. 
-	        	converters.insertAt(converters.lastIndexOf+1,converter);
+	        	converters.addAt(converters.lastIndexOf+1,converter);
 	        }
 	        else {
-	        	converters.insertAt(0,converter);
+	        	converters.addAt(0,converter);
 	        }
 	        for (var iter:Iterator = this.typeToConverterMap.keyIterator(); iter.hasNext();) {
 	            var type:Class = Class (iter.next());

@@ -11,7 +11,7 @@
 
 package hr.binaria.asx3m.io
 {
-	import vegas.data.iterator.Iterator;
+	import system.data.Iterator;
 	
 	public interface IHierarchicalStreamReader
 	{

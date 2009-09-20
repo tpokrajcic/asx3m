@@ -37,7 +37,7 @@ package hr.binaria.asx3m
 	
 	import mx.collections.ArrayCollection;
 	
-	import vegas.data.map.HashMap;
+	import system.data.maps.HashMap;
 	
 	public class Asx3m
 	{

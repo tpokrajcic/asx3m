@@ -13,11 +13,11 @@ package hr.binaria.asx3m.mapper
 {
 	import flash.utils.*;
 	
-	import vegas.data.Map;
-	import vegas.data.Set;
-	import vegas.data.iterator.Iterator;
-	import vegas.data.map.HashMap;
-	import vegas.data.sets.HashSet;
+	import system.data.Map;
+	import system.data.Set;
+	import system.data.Iterator;
+	import system.data.maps.HashMap;
+	import system.data.sets.HashSet;
 	
 	public class ClassAliasingMapper extends MapperWrapper
 	{
@@ -37,7 +37,7 @@ package hr.binaria.asx3m.mapper
 		
 		public function addClassAttributeAlias(name:String, type:Class):void {
         addClassAlias(name, type);
-        knownAttributes.insert(name);
+        knownAttributes.add(name);
 	    }
 	
 	    public function addTypeAlias(name:String, type:Class):void {

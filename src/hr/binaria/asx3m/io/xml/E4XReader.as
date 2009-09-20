@@ -15,18 +15,18 @@ package hr.binaria.asx3m.io.xml
 	
 	import mx.collections.XMLListCollection;
 	
-	import vegas.data.iterator.Iterator;
-	import vegas.data.stack.SimpleStack;
+	import system.data.Iterator;
+	import system.data.stacks.ArrayStack;
 
 	public class E4XReader implements IHierarchicalStreamReader
 	{
-		private var _pointers:SimpleStack;
+		private var _pointers:ArrayStack;
 		private var _currentElement:XML;
 		private var _current:XML;
 		
 		public function E4XReader(xml:XML) {
 			_current=xml;
-			_pointers=new SimpleStack();
+			_pointers=new ArrayStack();
 			_pointers.push(new Pointer());
 			reassignCurrentElement(_current);
 		}

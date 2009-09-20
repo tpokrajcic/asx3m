@@ -11,8 +11,8 @@
 
 package hr.binaria.asx3m.annotations
 {
-	import vegas.data.list.ArrayList;
-	import vegas.data.iterator.Iterator;
+	import system.data.lists.ArrayList;
+	import system.data.Iterator;
 	
 	public class Annotated
 	{
@@ -28,10 +28,10 @@ package hr.binaria.asx3m.annotations
 		public function get classAnnotations():ArrayList{return m_classAnnotations;}
 				
 		public function addFieldAnnotation(annotation:Annotation):void{
-			m_fieldAnnotations.insert(annotation);
+			m_fieldAnnotations.add(annotation);
 		}
 		public function addClassAnnotation(annotation:Annotation):void{
-			m_classAnnotations.insert(annotation);
+			m_classAnnotations.add(annotation);
 		}
 		
 		public function getFieldAnnotation(fieldName:String, annotationType:String):Annotation{

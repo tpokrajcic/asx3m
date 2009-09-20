@@ -21,9 +21,6 @@ package hr.binaria.asx3m.converters.reflection
 	import hr.binaria.asx3m.io.IHierarchicalStreamWriter;
 	import hr.binaria.asx3m.mapper.IMapper;
 	
-	import vegas.util.ObjectUtil;
-	
-
 	public class ReflectionConverter implements IConverter
 	{
 		private var _alias:Array;

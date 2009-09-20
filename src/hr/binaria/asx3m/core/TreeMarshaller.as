@@ -11,7 +11,7 @@
 
 package hr.binaria.asx3m.core
 {
-	import flash.utils.*;		import hr.binaria.asx3m.annotations.AnnotatedWrapper;	import hr.binaria.asx3m.annotations.Annotation;	import hr.binaria.asx3m.converters.IConverter;	import hr.binaria.asx3m.converters.IConverterLookup;	import hr.binaria.asx3m.converters.IDataHolder;	import hr.binaria.asx3m.converters.IMarshallingContext;	import hr.binaria.asx3m.io.IHierarchicalStreamWriter;	import hr.binaria.asx3m.mapper.IMapper;		import vegas.data.iterator.Iterator;
+	import flash.utils.*;		import hr.binaria.asx3m.annotations.AnnotatedWrapper;	import hr.binaria.asx3m.annotations.Annotation;	import hr.binaria.asx3m.converters.IConverter;	import hr.binaria.asx3m.converters.IConverterLookup;	import hr.binaria.asx3m.converters.IDataHolder;	import hr.binaria.asx3m.converters.IMarshallingContext;	import hr.binaria.asx3m.io.IHierarchicalStreamWriter;	import hr.binaria.asx3m.mapper.IMapper;		import system.data.Iterator;
 
 	public class TreeMarshaller implements IMarshallingContext
 	{
