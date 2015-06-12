@@ -40,7 +40,7 @@ package {<br>
        import hr.binaria.dto.Client;<br>
        import hr.binaria.asx3m.Asx3mer;<br>
 <br>
-	public class Asx3mTest extends Sprite<br>
+	public class Asx3mTest<br>
 	{<br>
                 		<br>
 		public function Asx3mTest()<br>
