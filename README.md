@@ -1,4 +1,4 @@
-<b>asx3m</b> is a library that enables de/serialization between ActionScript3 objects and XML.<br> It can be also extended to support any other format (e.g. JSON).
+<b>asx3m</b> library enables de/serialization between ActionScript3 objects and XML.<br>
 This ActionScript3 de/serializer is designed to be compatible with Java <a href='http://xstream.codehaus.org'>XStream</a> library, but it's not related to XStream project in any other way.<br>
 <br>
 <b>Usage:</b><br>
