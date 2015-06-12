@@ -14,5 +14,3 @@ List, Map, Set, Iterator, ArrayList, HashMap, HashSet, ArrayStack<br>
 Author: Tomislav Pokrajcic<br>
 Blog: <a href='http://www.svemir.net'>http://www.svemir.net</a><br>
 Company: <a href='http://www.binaria.hr'>http://www.binaria.hr</a><br>
-
-<a href='http://www.ohloh.net/p/asx3m'>Follow project on Ohloh</a>
