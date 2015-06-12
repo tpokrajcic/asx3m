@@ -34,8 +34,6 @@ package hr.binaria.dto<br>
 }<br>
 <br>
 package {<br>
-       import flash.display.Sprite;<br>
-	<br>
        import hr.binaria.dto.Product;<br>
        import hr.binaria.dto.Client;<br>
        import hr.binaria.asx3m.Asx3mer;<br>
